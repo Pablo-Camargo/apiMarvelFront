@@ -1,0 +1,81 @@
+.ComicTitle {
+  font-family: ccbiffbamboom, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.img {
+  max-width: 20%;
+  max-height: 30%;
+}
+.spinner {
+  border: 8px solid #ff000060;
+  border-left-color: #ff0000;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.box {
+  background: #fff;
+  border: solid black;
+  border-color: black;
+  float: left;
+}
+
+.boxtext {
+  background-color: #fffacd;
+  border: solid 2px #000;
+  border-left: 0px;
+  padding: 3px 10px;
+  font-weight: bold;
+}
+
+.boxTextTop-left {
+  position: absolute;
+  left: 3px;
+  top: -2px;
+  transform: skew(-15deg);
+}
+
+.box0 {
+  border-width: 3px 4px 3px 5px;
+  width: 100%;
+}
+
+.box1 {
+  border-width: 3px 4px 3px 5px;
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+
+.box2 {
+  width: 350px;
+  border-width: 3px 3px 5px 5px;
+  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+}
+
+.box3 {
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+
+.box4 {
+  border-width: 3px 4px 3px 5px;
+  border-radius: 15px/45px;
+  width: 100%;
+}

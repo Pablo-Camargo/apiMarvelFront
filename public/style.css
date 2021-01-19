@@ -1,3 +1,6 @@
+body {
+  background-color: #e4dfd2e0;
+}
 .ComicTitle {
   font-family: ccbiffbamboom, sans-serif;
   font-weight: 400;
@@ -8,11 +11,18 @@
   max-width: 20%;
   max-height: 30%;
 }
+.spinner-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 .spinner {
   border: 8px solid #ff000060;
   border-left-color: #ff0000;
   height: 80px;
   width: 80px;
+
   border-radius: 50%;
   animation: spin 4s linear infinite;
 }

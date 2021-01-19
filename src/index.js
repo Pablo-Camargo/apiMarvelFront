@@ -3,7 +3,7 @@ import axios from "axios";
 class App {
   constructor() {
     this.offset = 1;
-    //this.spinner = document.querySelector(".spinner-wraper");
+
     this.charBody = document.querySelector(".results");
     this.button = document.getElementById("bt");
     this.name = document.getElementById("input");
@@ -12,13 +12,13 @@ class App {
   eventosDeButoon() {
     this.button.onclick = () => this.searchCharacter();
   }
+
   loaderEvent() {
     this.spinner = document.querySelector(".spinner-wraper");
     this.spinner.classList.add("d-none");
   }
 
   async getCharacters() {
-    console.log(this.offset);
     try {
       const response = await axios.get(
         `http://localhost:3333/api/${this.offset}`
@@ -71,6 +71,7 @@ class App {
         console.log(event.target.dataset.id);
         for (const char of data) {
           this.charBody.innerHTML = "";
+
           if (parseInt(event.target.dataset.id) === char.id) {
             if (char.thumbnail.path.includes("image_not_available")) {
               let comics = "";
@@ -122,7 +123,7 @@ class App {
                                   <p><span class="fw-bold">Description: </span>${description}</p>
                                   <p class="fw-bold">Comics:</p>
                                   <ul>${comics}</ul>
-                                  <a href="http://localhost:8080" class="box btn btn-dark text-white">Back</a>
+                                  <a href="http://localhost:8080" class="box0 btn btn-dark text-white">Back</a>
                                 </div>
                               </div>`;
               this.charBody.innerHTML += output;
@@ -136,6 +137,7 @@ class App {
   }
   paginate(data) {
     document.querySelector(".pagination").innerHTML = "";
+
     const pages = Math.ceil(data / 100); // aredondamento de ex 20.4 => 21
 
     for (let i = 1; i <= pages; i++) {
@@ -146,6 +148,7 @@ class App {
     for (let link of document.getElementsByClassName("page-link")) {
       link.onclick = (event) => {
         event.preventDefault();
+
         const page = event.target.dataset.page;
 
         this.offset = parseInt(page);

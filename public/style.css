@@ -37,13 +37,19 @@ body {
   background: #fff;
   border: solid black;
   border-color: black;
-  float: left;
+}
+.navbar {
+  border: solid;
+  border-color: #000;
+}
+footer {
+  border: solid;
+  border-color: #000;
 }
 
 .boxtext {
   background-color: #fffacd;
   border: solid 2px #000;
-
   padding: 3px 10px;
   font-weight: bold;
 }
@@ -86,4 +92,5 @@ body {
 }
 * {
   font-family: "Marvel", sans-serif;
+  font-weight: bold;
 }

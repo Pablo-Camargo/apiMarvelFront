@@ -19,7 +19,7 @@ export default class CharCard {
     const comDes = this.hasComicsDescription(comics, description);
     output = `  <div class="col-12 d-flex  box" >
     <div>
-        <img class="img-responsive  rounded mb-lg-0  box4  " src="${hasImg}"  width="800" alt="...">
+        <img class="img-responsive  rounded mb-lg-0  box4  " src="${hasImg}"  width="100" alt="...">
     </div>
     <div class="card-body   h-100 mt-2 mt-lg-0  box  ">
       <h5 class="card-title  ml-3 mt-3 boxtext">${this.name}</h5>

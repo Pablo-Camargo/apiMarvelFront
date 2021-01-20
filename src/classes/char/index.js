@@ -16,7 +16,7 @@ export default class Char {
           </li>`;
     } else {
       newChar = `<li class="card boxtext box1 col-md-3">
-        <input type="image" class="img-responsive mt-3 box  "  width="100"data-id="${this.id}"src="${this.thumbnail.path}.${this.thumbnail.extension}"><h6>${this.name}</h6>
+        <input type="image" class="img-responsive mt-3 box  "  width="100"data-id="${this.id}"src="${this.thumbnail.path}.${this.thumbnail.extension}"><h6 class="box0 box">${this.name}</h6>
           </li>`;
     }
     return newChar;

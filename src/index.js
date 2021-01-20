@@ -74,10 +74,10 @@ class App {
     document.querySelector(".pagination").innerHTML = "";
     const pages = Math.ceil(data / 100);
     for (let i = 1; i <= pages; i++) {
-      const li = `<li class="page-item"><a class="page-link" href="#" data-page="${i}">${i}</a></li>`;
+      const li = `<li class="page-item "><a class="btn btn-outline-dark" href="#" data-page="${i}">${i}</a></li>`;
       document.querySelector(".pagination").innerHTML += li;
     }
-    for (let link of document.getElementsByClassName("page-link")) {
+    for (let link of document.getElementsByClassName("btn")) {
       link.onclick = (event) => {
         event.preventDefault();
         const page = event.target.dataset.page;
